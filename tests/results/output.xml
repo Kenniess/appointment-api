@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.10.20 on linux)" generated="2026-04-22T14:16:54.110197" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/tests">
+<suite id="s1-s1" name="Api Test" source="/tests/api_test.robot">
+<test id="s1-s1-t1" name="Verify Get All Patients Successfully" line="8">
+<status status="FAIL" start="2026-04-22T14:16:54.136925" elapsed="0.000440">Test cannot be empty.</status>
+</test>
+<test id="s1-s1-t2" name=" [Documentation] ทดสอบการดึงขอมูลคนไขทั้งหมดจาก API" line="9">
+<status status="FAIL" start="2026-04-22T14:16:54.137630" elapsed="0.000730">Test cannot be empty.</status>
+</test>
+<test id="s1-s1-t3" name=" Create Session api_session ${BASE_URL}" line="10">
+<status status="FAIL" start="2026-04-22T14:16:54.138795" elapsed="0.000217">Test cannot be empty.</status>
+</test>
+<test id="s1-s1-t4" name=" ${response}= GET On Session api_session /patients" line="11">
+<status status="FAIL" start="2026-04-22T14:16:54.139461" elapsed="0.000278">Test cannot be empty.</status>
+</test>
+<test id="s1-s1-t5" name=" Status Should Be 200 ${response}" line="12">
+<status status="FAIL" start="2026-04-22T14:16:54.140359" elapsed="0.000257">Test cannot be empty.</status>
+</test>
+<test id="s1-s1-t6" name=" Log To Console &#10;Response Data: ${response.json()}" line="13">
+<status status="FAIL" start="2026-04-22T14:16:54.141183" elapsed="0.000256">Test cannot be empty.</status>
+</test>
+<test id="s1-s1-t7" name="Verify Create New Patient" line="14">
+<status status="FAIL" start="2026-04-22T14:16:54.141614" elapsed="0.000196">Test cannot be empty.</status>
+</test>
+<test id="s1-s1-t8" name=" [Documentation] ทดสอบการเพิ่มขอมูลคนไขใหมผาน POST" line="15">
+<status status="FAIL" start="2026-04-22T14:16:54.141990" elapsed="0.001098">Test cannot be empty.</status>
+</test>
+<test id="s1-s1-t9" name=" ${payload}= Create Dictionary hn_number=HN999 patient_name=Robot Tester exam_date=2026-03-31 diagnosis=Automated Testing" line="16">
+<status status="FAIL" start="2026-04-22T14:16:54.143559" elapsed="0.000637">Test cannot be empty.</status>
+</test>
+<test id="s1-s1-t10" name=" ${headers}= Create Dictionary Content-Type=application/json" line="17">
+<status status="FAIL" start="2026-04-22T14:16:54.144694" elapsed="0.000271">Test cannot be empty.</status>
+</test>
+<test id="s1-s1-t11" name=" ${response}= POST On Session api_session /patients json=${payload} headers=${headers}" line="18">
+<status status="FAIL" start="2026-04-22T14:16:54.145917" elapsed="0.000419">Test cannot be empty.</status>
+</test>
+<test id="s1-s1-t12" name=" Status Should Be 200 ${response}" line="19">
+<status status="FAIL" start="2026-04-22T14:16:54.146773" elapsed="0.000341">Test cannot be empty.</status>
+</test>
+<status status="FAIL" start="2026-04-22T14:16:54.135270" elapsed="0.012222"/>
+</suite>
+<status status="FAIL" start="2026-04-22T14:16:54.112077" elapsed="0.035995"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="12" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="12" skip="0">Tests</stat>
+<stat name="Api Test" id="s1-s1" pass="0" fail="12" skip="0">Tests.Api Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-04-22T14:16:54.102359" level="ERROR">Error in file '/tests/api_test.robot' on line 2: Non-existing setting 'Library RequestsLibrary'.</msg>
+<msg time="2026-04-22T14:16:54.102451" level="ERROR">Error in file '/tests/api_test.robot' on line 3: Non-existing setting 'Library Collections'.</msg>
+<msg time="2026-04-22T14:16:54.135361" level="ERROR">Error in file '/tests/api_test.robot' on line 6: Setting variable '${BASE_URL} http://api-server:8000' failed: Invalid variable name '${BASE_URL} http://api-server:8000'.</msg>
+<msg time="2026-04-22T14:16:54.146806" level="WARN">Multiple tests with name ' Status Should Be 200 ${response}' executed in suite 'Tests.Api Test'.</msg>
+</errors>
+</robot>
