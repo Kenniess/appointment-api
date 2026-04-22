@@ -33,7 +33,7 @@ async def read_root():
         <head><title>CN334 Web App</title></head>
         <body>
             <h1>Welcome to CN334 Backend Development</h1>
-            <p>6710742294 Adawat auarayamontri</p>
+            <p>6710742369 Thanakorn Lakhawattana</p>
             <p>Port: 3340 is working!</p>
         </body>
     </html>
